@@ -14,13 +14,14 @@
         }
     ],
     "require": {
-        "php": "^7.2",
-        "league/flysystem": "~1.0",
+        "php": "^8.0",
+        "league/flysystem": "^2.0",
         "gliterd/backblaze-b2": ">=1.5.0",
         "psr/http-message-implementation": "*",
         "mikey179/vfsstream": "*"
     },
     "require-dev": {
+        "league/flysystem-adapter-test-utilities": "^2.3",
         "phpunit/phpunit" : "~4.0||~5.0",
         "scrutinizer/ocular": "~1.1",
         "squizlabs/php_codesniffer": "~2.3"
