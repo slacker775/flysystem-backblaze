@@ -1,9 +1,9 @@
 {
-    "name": "mhetreramesh/flysystem-backblaze",
+    "name": "slacker775/flysystem-backblaze",
     "type": "library",
     "description": "Backblaze adapter for the flysystem filesystem abstraction library",
     "keywords": ["flysystem", "filesystem", "api", "backblaze", "client"],
-    "homepage": "https://github.com/mhetreramesh/flysystem-backblaze",
+    "homepage": "https://github.com/slacker775/flysystem-backblaze",
     "license": "MIT",
     "authors": [
         {
