@@ -31,10 +31,7 @@ class BackblazeAdapter implements FilesystemAdapter
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function getClient()
+    public function getClient(): Client
     {
         return $this->client;
     }
@@ -102,7 +99,7 @@ class BackblazeAdapter implements FilesystemAdapter
             return false;
         }
 
-        return $download === true ? ['stream' => $resource] : false;
+        return $download === true ? $resource : false;
     }
 
     /**
@@ -163,17 +160,10 @@ class BackblazeAdapter implements FilesystemAdapter
     /**
      * {@inheritdoc}
      */
-    public function getMetadata($path)
-    {
-        return false;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
     public function mimeType(string $path): FileAttributes
     {
-        return false;
+        $type = $this->detector->detectMimeTypeFromFile($path);
+        return new FileAttributes($path,null,null, null, $type);
     }
 
     /**
@@ -228,6 +218,7 @@ class BackblazeAdapter implements FilesystemAdapter
 
     public function visibility(string $path): FileAttributes
     {
+        return new FileAttributes($path);
     }
 
     /**
