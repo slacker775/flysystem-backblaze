@@ -6,6 +6,11 @@ Updates should follow the [Keep a CHANGELOG](http://keepachangelog.com/) princip
 
 ## 2021-12-01
 ### Fixed
+- Fix composer project namespace
+- Fix readStream return to just be resource, not array
+
+## 2021-12-01
+### Fixed
 - Migrate to PHP 8
 - Upgrade to league/filesystem 2.x
 
